@@ -5,17 +5,6 @@ from random import Random
 from time import time
 from datetime import timedelta
 
-cnt=0
-
-def test(s,A,k,id):
-	print 's: ',s
-	print 'A: ',A
-	print 'k: ',k
-	print '======================================================'
-	global cnt
-	cnt+=1
-	return cnt>5
-
 def solve(s,A,k,id):
 	rand=Random(x=id)
 	lA=len(A)

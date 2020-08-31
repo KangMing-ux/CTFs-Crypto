@@ -1,2 +1,2 @@
 # WMCTF2020-Crypto
-Cryptography challenges of WMCTF2020
+Cryptography challenges of various kinds CTFs

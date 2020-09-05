@@ -10,7 +10,6 @@ def solve():
     for fac in facs:
         phi=pow(fac[0],fac[1]-1)*(fac[0]-1)
         if gcd(phi,e)==2:
-            print fac
             M=pow(fac[0],fac[1])
             t=inverse(e/2,phi)
             ms2.append(power_mod(cip,t,M))

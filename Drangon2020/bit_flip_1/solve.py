@@ -81,18 +81,6 @@ def server():
     enc_flag = cipher.encrypt(FLAG)
     return (bob.my_number,b64encode(iv).decode(),b64encode(enc_flag).decode())
 
-#Do not execute this function easily; it takes a long time! 
-def test():
-    for ii in range(99):
-        print('sleep 1s...')
-        sleep(1)
-        print('go to work!')
-        ret=server()
-        if abs(ret)>2:
-            print('Program error!')
-            return
-    print('correct')
-
 if __name__=='__main__':
     bnum,iv,enc_flag=server()
     for seed in [b'\x00',b'\x01']:

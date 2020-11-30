@@ -4,11 +4,9 @@ from string import printable
 
 def server():
     alice_seed=urandom(16)
-    #lice_seed=b'}s\xe7"\x8a\x9cu\xa2\'\xe1\xa1\xadN{L\x03'
     print(alice_seed)
     guess='0'
     #hack s1
-    flip_str=b'\x02'
     cnt=0
     while 1:
         flip_str=long_to_bytes(cnt<<128)
@@ -30,7 +28,6 @@ def server():
             break                
         cnt+=1
     #hack s_{j} by s_{j-1}...s_{1},j=2,...,127
-    cnt&=0
     for j in range(2,128):
         cnt&=0
         while 1:
